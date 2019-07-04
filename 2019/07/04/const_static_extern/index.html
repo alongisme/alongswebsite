@@ -94,16 +94,18 @@
 
 
 
-  <meta name="description" content="along&apos;s website">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://alongisme.github.io/index.html">
+  <meta name="description" content="const与宏的区别： const简介：之前常用的字符串常量，一般是抽成宏，但是苹果不推荐我们抽成宏，推荐我们使用const常量。    编译时刻:宏是预编译（编译之前处理），const是编译阶段。 编译检查:宏不做检查，不会报编译错误，只是替换，const会编译检查，会报编译错误。 宏的好处:宏能定义一些函数，方法。 const不能。 宏的坏处:使用大量宏，容易造成编译时间久，每次都需要重新替">
+<meta name="keywords" content="面试题,基础知识,static,const,extern">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;font size=7 face=&quot;黑体&quot;&gt;&lt;b&gt;const static extern 简介&lt;&#x2F;b&gt;&lt;&#x2F;font&gt;">
+<meta property="og:url" content="https://alongisme.github.io/2019/07/04/const_static_extern/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="along&apos;s website">
+<meta property="og:description" content="const与宏的区别： const简介：之前常用的字符串常量，一般是抽成宏，但是苹果不推荐我们抽成宏，推荐我们使用const常量。    编译时刻:宏是预编译（编译之前处理），const是编译阶段。 编译检查:宏不做检查，不会报编译错误，只是替换，const会编译检查，会报编译错误。 宏的好处:宏能定义一些函数，方法。 const不能。 宏的坏处:使用大量宏，容易造成编译时间久，每次都需要重新替">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-04T12:50:06.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="along&apos;s website">
+<meta name="twitter:title" content="&lt;font size=7 face=&quot;黑体&quot;&gt;&lt;b&gt;const static extern 简介&lt;&#x2F;b&gt;&lt;&#x2F;font&gt;">
+<meta name="twitter:description" content="const与宏的区别： const简介：之前常用的字符串常量，一般是抽成宏，但是苹果不推荐我们抽成宏，推荐我们使用const常量。    编译时刻:宏是预编译（编译之前处理），const是编译阶段。 编译检查:宏不做检查，不会报编译错误，只是替换，const会编译检查，会报编译错误。 宏的好处:宏能定义一些函数，方法。 const不能。 宏的坏处:使用大量宏，容易造成编译时间久，每次都需要重新替">
 
 
 
@@ -113,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://alongisme.github.io/">
+  <link rel="canonical" href="https://alongisme.github.io/2019/07/04/const_static_extern/">
 
 
 
@@ -123,7 +125,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title><font size="7" face="黑体"><b>const static extern 简介</b></font> | Hexo</title>
   
 
 
@@ -171,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,182 +303,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://alongisme.github.io/alongswebsite/2019/07/04/nslog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Along Shi">
-      <meta itemprop="description" content="along's website">
-      <meta itemprop="image" content="/alongswebsite/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/alongswebsite/2019/07/04/nslog/" class="post-title-link" itemprop="url"><font size="7" face="黑体"><b>NSLog 简介</b></font></a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-04 20:52:30 / 修改时间：20:56:44" itemprop="dateCreated datePublished" datetime="2019-07-04T20:52:30+08:00">2019-07-04</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/alongswebsite/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#ifdef DEBUG  </span></span><br><span class="line"><span class="meta"># define DLog(fmt, ...) NSLog((@<span class="meta-string">"[文件名:%s]\n"</span> <span class="meta-string">"[函数名:%s]\n"</span> <span class="meta-string">"[行号:%d] \n"</span> fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);  </span></span><br><span class="line"><span class="meta">#else  </span></span><br><span class="line"><span class="meta"># define DLog(...);  </span></span><br><span class="line"><span class="meta">#endif</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>__VA_ARGS__ 是一个可变参数的宏，很少人知道这个宏，这个可变参数的宏是新的C99规范中新增的，目前似乎只有gcc支持（VC6.0的编译器不支持）。宏前面加上##的作用在于，当可变参数的个数为0时，这里的##起到把前面多余的”,”去掉的作用,否则会编译出错, 你可以试试。</p>
-</li>
-<li><p>__FILE__ 宏在预编译时会替换成当前的源文件名</p>
-</li>
-<li><p>__LINE__宏在预编译时会替换成当前的行号</p>
-</li>
-<li><p>__FUNCTION__宏在预编译时会替换成当前的函数名称<br>有了以上这几个宏，特别是有了__VA_ARGS__ ，调试信息的输出就变得灵活多了。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -509,10 +337,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/alongswebsite/2019/07/04/const_static_extern/" class="post-title-link" itemprop="url"><font size="7" face="黑体"><b>const static extern 简介</b></font></a>
+          <h1 class="post-title" itemprop="name headline"><font size="7" face="黑体"><b>const static extern 简介</b></font>
+
               
             
           </h1>
@@ -594,9 +420,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <h2 id="const与宏的区别："><a href="#const与宏的区别：" class="headerlink" title="const与宏的区别："></a><strong>const与宏的区别：</strong></h2><p style="text-indent:2em">
 const简介：之前常用的字符串常量，一般是抽成宏，但是苹果不推荐我们抽成宏，推荐我们使用const常量。
 </p>
@@ -671,8 +495,6 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GlobeConst.h</span><br><span class="line"><span class="comment">/*******************************首页****************************/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">extern</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> nameKey = <span class="string">@"name"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************首页****************************/</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">GlobeConst.m</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************首页****************************/</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span> * <span class="keyword">const</span> nameKey = <span class="string">@"name"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************首页****************************/</span></span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
 
@@ -693,14 +515,47 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
 
     <footer class="post-footer">
       
-
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/alongswebsite/tags/面试题/" rel="tag"># 面试题</a>
+          
+            <a href="/alongswebsite/tags/基础知识/" rel="tag"># 基础知识</a>
+          
+            <a href="/alongswebsite/tags/static/" rel="tag"># static</a>
+          
+            <a href="/alongswebsite/tags/const/" rel="tag"># const</a>
+          
+            <a href="/alongswebsite/tags/extern/" rel="tag"># extern</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/alongswebsite/2019/07/04/nslog/" rel="prev" title="<font size=7 face=" 黑体"><b>NSLog 简介</b>">
+                <font size="7" face="黑体"><b>NSLog 简介</b></font> <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -710,14 +565,15 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -737,8 +593,17 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -839,6 +704,23 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const与宏的区别："><span class="nav-number">1.</span> <span class="nav-text">const与宏的区别：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const作用：限制类型"><span class="nav-number">2.</span> <span class="nav-text">const作用：限制类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const开发中使用场景："><span class="nav-number">3.</span> <span class="nav-text">const开发中使用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static和extern简单使用（）要使用一个东西，先了解其作用"><span class="nav-number">4.</span> <span class="nav-text">static和extern简单使用（）要使用一个东西，先了解其作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static与cosnt联合使用"><span class="nav-number">5.</span> <span class="nav-text">static与cosnt联合使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extern与const联合使用"><span class="nav-number">6.</span> <span class="nav-text">extern与const联合使用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -968,6 +850,10 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
 
 
   
+  <script src="/alongswebsite/js/scrollspy.js?v=7.2.0"></script>
+<script src="/alongswebsite/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -983,6 +869,8 @@ const简介：之前常用的字符串常量，一般是抽成宏，但是苹果
 
   
 
+
+  
 
 
   
